@@ -1,0 +1,44 @@
+{
+  "name": "newsengine",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx src/scripts/seed.ts",
+    "eval:recsys": "tsx src/scripts/eval-recsys.ts",
+    "test:rules": "tsx firestore.rules.test.ts",
+    "test:e2e": "playwright test",
+    "test:smoke": "tsx src/scripts/test-routes.ts",
+    "test:interactions": "tsx src/scripts/test-interactions.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@remotion/player": "^4.0.260",
+    "clsx": "^2.1.1",
+    "firebase": "^11.4.0",
+    "framer-motion": "^12.4.7",
+    "lucide-react": "^0.475.0",
+    "next": "^15.1.7",
+    "posthog-js": "^1.438.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.260",
+    "tailwind-merge": "^3.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  }
+}

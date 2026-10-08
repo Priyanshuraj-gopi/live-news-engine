@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">NewsEngine story visual</title>
+  <desc id="desc">A red editorial signal visual used when a remote story image is unavailable.</desc>
+  <rect width="1200" height="700" fill="#f7f4ef"/>
+  <circle cx="1010" cy="120" r="270" fill="#f7dfe0"/>
+  <circle cx="1100" cy="75" r="140" fill="#d9232e" opacity=".16"/>
+  <path d="M0 570 C210 480 330 610 530 520 S890 450 1200 540 V700 H0Z" fill="#d9232e" opacity=".92"/>
+  <path d="M0 625 C190 540 360 675 560 590 S930 525 1200 600 V700 H0Z" fill="#a91522" opacity=".8"/>
+  <g fill="#202124">
+    <text x="72" y="150" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">NEWSENGINE</text>
+    <text x="72" y="235" font-family="Georgia, serif" font-size="86" font-weight="700">LIVE</text>
+    <text x="76" y="275" font-family="Arial, sans-serif" font-size="19" letter-spacing="3">VERIFIED SIGNAL</text>
+  </g>
+  <circle cx="1080" cy="150" r="46" fill="#d9232e"/>
+  <text x="1061" y="170" fill="#fff" font-family="Arial, sans-serif" font-size="48" font-weight="700">Z</text>
+</svg>
