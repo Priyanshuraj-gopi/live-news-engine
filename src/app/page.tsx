@@ -7,6 +7,7 @@ import { useLiveStories } from "@/hooks/useLiveStories";
 import { rankStoriesForUser } from "@/lib/recommendation/engine";
 import { Story } from "@/types";
 import { LiveBroadcastPlayer } from "@/components/media/LiveBroadcastPlayer";
+import { QuizBanner } from "@/components/games/QuizBanner";
 
 const genres = ["All signals", "Technology", "Markets", "Climate", "Culture"];
 
@@ -83,10 +84,12 @@ export default function HomePage() {
       </section>
 
       <LiveBroadcastPlayer headline={leadStory ? storyCopy(leadStory, language)?.headline : "NewsEngine live desk"} source={leadStory?.source.name} />
+      <div className="homepage-game-link"><QuizBanner storyId={leadStory?.id} /></div>
 
       <nav className="route-rail" aria-label="Explore NewsEngine">
         <span className="route-rail-label">Explore the newsroom</span>
         <Link href="/feed">Live feed <span aria-hidden="true">→</span></Link>
+        <Link href="/games">Newsroom Arcade <span aria-hidden="true">→</span></Link>
         <Link href="/debate">Community debate <span aria-hidden="true">→</span></Link>
         <Link href="/upload">Submit a story <span aria-hidden="true">→</span></Link>
         <Link href="/terms">Terms <span aria-hidden="true">→</span></Link>

@@ -20,6 +20,7 @@ import {
   Clock,
   Sparkles,
   CheckCircle,
+  Brain,
 } from "lucide-react";
 
 interface InshortsCardProps {
@@ -231,6 +232,15 @@ export function InshortsCard({ story, language, isActive }: InshortsCardProps) {
             <Video className="w-3.5 h-3.5 text-red-500" />
             <span>AI Reel</span>
           </button>
+
+          <Link
+            href={`/games?tab=quiz&storyId=${story.id}`}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium border border-border bg-card hover:border-primary hover:text-primary transition-colors ml-auto"
+            title="Take an interactive quiz on this story"
+          >
+            <Brain className="w-3.5 h-3.5 text-primary" />
+            <span>Story Quiz</span>
+          </Link>
         </div>
       )}
 

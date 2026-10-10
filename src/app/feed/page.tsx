@@ -7,6 +7,7 @@ import { useAuth } from "@/context/AuthContext";
 import { useLiveStories } from "@/hooks/useLiveStories";
 import { rankStoriesForUser } from "@/lib/recommendation/engine";
 import { ArrowLeft, Clock, RefreshCw, Sparkles } from "lucide-react";
+import { QuizBanner } from "@/components/games/QuizBanner";
 
 const InshortsFeed = dynamic(
   () => import("@/components/feed/InshortsFeed").then((module) => module.InshortsFeed),
@@ -52,8 +53,11 @@ export default function FeedPage() {
         </div>
       </div>
 
-      <div className="max-w-xl w-full mx-auto px-4 mb-2 text-center text-[10px] text-muted-foreground" aria-live="polite">
-        {isSyncing ? "Checking Zee News wire…" : usingLiveWire && lastSynced ? `Live Zee News headlines · checked ${lastSynced.toLocaleTimeString()}` : lastSynced ? "Offline demo headlines · live wire unavailable" : "Live wire ready"}
+      <div className="max-w-xl w-full mx-auto px-4 mb-2 flex flex-col gap-2">
+        <QuizBanner />
+        <div className="text-center text-[10px] text-muted-foreground" aria-live="polite">
+          {isSyncing ? "Checking Zee News wire…" : usingLiveWire && lastSynced ? `Live Zee News headlines · checked ${lastSynced.toLocaleTimeString()}` : lastSynced ? "Offline demo headlines · live wire unavailable" : "Live wire ready"}
+        </div>
       </div>
 
       <div className="flex-1 flex items-center justify-center">

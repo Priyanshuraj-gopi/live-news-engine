@@ -9,6 +9,7 @@ const expectedRoutes = [
   "/debate/page",
   "/upload/page",
   "/admin/page",
+  "/games/page",
   "/terms/page",
   "/privacy/page",
   "/story/[id]/page",
@@ -33,7 +34,7 @@ if (missing.length) {
 const homepageSource = readFileSync(join(root, "src", "app", "page.tsx"), "utf8");
 const navigationSource = readFileSync(join(root, "src", "components", "shared", "Navbar.tsx"), "utf8");
 const broadcastSource = readFileSync(join(root, "src", "components", "media", "LiveBroadcastPlayer.tsx"), "utf8");
-const requiredLinks = ["/feed", "/debate", "/upload", "/terms", "/privacy"];
+const requiredLinks = ["/feed", "/games", "/debate", "/upload", "/terms", "/privacy"];
 const missingLinks = requiredLinks.filter((href) => !homepageSource.includes(`href=\"${href}\"`) && !navigationSource.includes(`href: \"${href}\"`));
 
 if (missingLinks.length) {

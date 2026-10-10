@@ -50,16 +50,12 @@ Build "NewsEngine", an AI content & monetization platform for Zee Media across 7
   - **Test Coverage:** All 6 automated test scripts pass with 100% success rate (`test-live-news.ts`, `test-ai-pipeline.ts`, `test-debate-engine.ts`, `test-editorial-pipeline.ts`, `eval-recsys.ts`, `test-monetization-pipeline.ts`).
   - **Production Build:** `next build` pre-rendered all 10 static and dynamic routes (`/`, `/_not-found`, `/admin`, `/api/news/sync`, `/api/syndication/manus`, `/debate`, `/feed`, `/story/[id]`, `/upload`).
 
-## Key Files
-- `src/lib/monetization/engine.ts`: Metered quota logic, Pro activation, and multi-channel yield calculations.
-- `src/components/monetization/PaywallModal.tsx`: Premium subscription paywall modal with 1-click Pro demo.
-- `src/components/monetization/SponsoredCard.tsx`: Native ad cards for swipe feeds.
-- `src/app/admin/page.tsx`: Tab 4 Monetization & Yield desk with interactive revenue simulators.
-- `src/scripts/test-monetization-pipeline.ts`: Test suite for paywall quota and syndication yields.
-- `.agents/mcp_config.json`: PostHog MCP server configuration.
-- `src/lib/analytics/posthog.ts`: PostHog telemetry event dispatcher & genre affinity calculator.
-- `src/lib/recommendation/engine.ts`: Hybrid 40/35/25 recommendation engine & Haversine geo decay.
-- `src/components/personalization/PreferencesModal.tsx`: 1-tap topic and region customizer modal.
-- `src/app/page.tsx`: Home Wire with AI For You / Chronological Wire toggle and match badges.
-- `src/app/feed/page.tsx`: Inshorts Swipe Deck with personalized story ordering.
+- **Phase 9 (Newsroom Arcade & Community Engagement Games):**
+  - **Newsroom Arcade Hub (`/games`):** Dedicated top-level editorial games section with tabs for Live News Wire Quiz, Current Affairs Crossword, and 2 Truths & 1 Lie.
+  - **Live Wire Quiz Generator (`quizGenerator.ts` & `LiveNewsQuiz.tsx`):** Auto-synthesizes multiple-choice questions from live wire stories and story spotlights (`?storyId=...`), with multi-language support (English, Hindi, and regional languages) and verified fallback decks.
+  - **Current Affairs Crossword Puzzle (`crosswordData.ts` & `AffairsCrossword.tsx`):** Interactive, accessible crossword grid with keyboard navigation, active clue highlighting, letter reveal hints, and mathematically validated word matrices for Weekly and Monthly affairs.
+  - **2 Truths & 1 Lie Game (`twoTruthsData.ts` & `TwoTruthsAndLie.tsx`):** Fact-checking game with rotating decks covering space, semiconductors, clean energy, and RBI monetary policy. Features card flip reveals, authoritative citations, and debunking explanations.
+  - **Newsroom IQ Points & Credibility System (`engine.ts` & `NewsroomArcadeHeader.tsx`):** Real-time credibility scoring (+20 pts quiz, +60 pts crossword, +30 pts lie detection), 5 rank tiers (Rookie Reader to Newsroom Luminary), daily streak tracking, and local storage persistence.
+  - **Live News Hyperlink (`QuizBanner.tsx` & `InshortsCard.tsx`):** Added a prominent broadcast quiz banner in the Live Feed (`/feed`) header and a "Story Quiz" action button on every story card linking directly to contextual quizzes.
+  - **Verification:** `test-games-engine.ts` passed (22/22 checks, 100%), and `next build` pre-rendered all 12 routes.
 

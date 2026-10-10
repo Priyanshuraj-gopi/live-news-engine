@@ -13,7 +13,8 @@
     "test:rules": "tsx firestore.rules.test.ts",
     "test:e2e": "playwright test",
     "test:smoke": "tsx src/scripts/test-routes.ts",
-    "test:interactions": "tsx src/scripts/test-interactions.ts"
+    "test:interactions": "tsx src/scripts/test-interactions.ts",
+    "test:games": "tsx src/scripts/test-games-engine.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
